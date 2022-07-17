@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\{{ PathModel }};
+use VeseluyRodjer\RepositoryGenerator\Repository\BaseRepository;
+
+class DummyClass extends BaseRepository
+{
+    public function __construct(
+        protected {{ Model }} $model
+    ) {}
+}
