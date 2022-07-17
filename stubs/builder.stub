@@ -3,9 +3,9 @@
 namespace {{ namespace }};
 
 use App\Models\{{ PathModel }};
-use VeseluyRodjer\RepositoryGenerator\Repository\BaseRepository;
+use VeseluyRodjer\BuilderGenerator\Builder\BaseBuilder;
 
-class DummyClass extends BaseRepository
+class DummyClass extends BaseBuilder
 {
     public function __construct(
         protected {{ Model }} $model

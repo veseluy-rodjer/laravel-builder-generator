@@ -1,32 +1,32 @@
 <?php
 
-namespace VeseluyRodjer\RepositoryGenerator\Console;
+namespace VeseluyRodjer\BuilderGenerator\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 
-class MakeRepository extends GeneratorCommand
+class MakeBuilder extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'make:repository {name}';
+    protected $signature = 'make:builder {name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new repository class';
+    protected $description = 'Create a new builder class';
 
     /**
      * The type of class being generated.
      *
      * @var string
      */
-    protected $type = 'Repository';
+    protected $type = 'Builder';
 
     /**
      * Get the stub file for the generator.
@@ -35,7 +35,7 @@ class MakeRepository extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/../../stubs/repository.stub';
+        return __DIR__.'/../../stubs/builder.stub';
     }
 
     public function handle()
@@ -51,7 +51,7 @@ class MakeRepository extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Repositories';
+        return $rootNamespace.'\Builders';
     }
 
     /**

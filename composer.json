@@ -1,8 +1,8 @@
 {
-    "name": "veseluy-rodjer/laravel-repository-generator",
-    "description": "Generate Laravel repositories",
+    "name": "veseluy-rodjer/laravel-builder-generator",
+    "description": "Generate Laravel builders",
     "keywords": ["generator", "php", "cli", "generator", "laravel", "artisan"],
-    "homepage": "https://github.com/veseluy-rodjer/laravel-repository-generator",
+    "homepage": "https://github.com/veseluy-rodjer/laravel-builder-generator",
     "license": "MIT",
     "authors": [
         {
@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VeseluyRodjer\\RepositoryGenerator\\": "src/"
+            "VeseluyRodjer\\BuilderGenerator\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VeseluyRodjer\\RepositoryGenerator\\RepositoryGeneratorServiceProvider"
+                "VeseluyRodjer\\BuilderGenerator\\BuilderGeneratorServiceProvider"
             ]
         }
     }
