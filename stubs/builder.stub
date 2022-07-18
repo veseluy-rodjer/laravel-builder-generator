@@ -7,7 +7,5 @@ use VeseluyRodjer\BuilderGenerator\Builder\BaseBuilder;
 
 class DummyClass extends BaseBuilder
 {
-    public function __construct(
-        protected {{ Model }} $model
-    ) {}
+    //
 }

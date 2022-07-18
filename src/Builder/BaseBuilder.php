@@ -9,21 +9,29 @@ class BaseBuilder extends Builder
 {
     public function getAll(): Builder
     {
-        return $this->model->select();
+        $this->select();
+
+        return $this;
     }
 
-    public function findOrFail(int $id): Model
+    public function findModel(int $id): Builder
     {
-        return $this->model->findOrFail($id);
+        $this->findOrFail($id);
+
+        return $this;
     }
 
-    public function where(string $attr, string|int $val): Builder
+    public function filter(string $attr, string|int $val): Builder
     {
-        return $this->model->where($attr, $val);
+        $this->where($attr, $val);
+
+        return $this;
     }
 
     public function statusFilter(int $status): Builder
     {
-        return $this->model->where('status', $status);
+        $this->where('status', $status);
+
+        return $this;
     }
 }
