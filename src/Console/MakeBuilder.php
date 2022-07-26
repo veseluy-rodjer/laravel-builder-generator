@@ -64,11 +64,6 @@ class MakeBuilder extends GeneratorCommand
     protected function replaceNamespace(&$stub, $name)
     {
         $dummyClass = str_replace($this->getNamespace($name).'\\', '', $name);
-        $pathModel = str_replace(['Builder', '/'], ['', '\\'], $this->getNameInput());
-        $model = str_replace('Builder', '', $dummyClass);
-
-        $stub = str_replace('{{ PathModel }}', $pathModel, $stub);
-        $stub = str_replace('{{ Model }}', $model, $stub);
 
         return parent::replaceNamespace($stub, $name);
     }

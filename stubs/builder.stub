@@ -2,7 +2,6 @@
 
 namespace {{ namespace }};
 
-use App\Models\{{ PathModel }};
 use VeseluyRodjer\BuilderGenerator\Builder\BaseBuilder;
 
 class DummyClass extends BaseBuilder
