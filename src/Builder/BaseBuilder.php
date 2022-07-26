@@ -6,28 +6,28 @@ use Illuminate\Database\Eloquent\Builder;
 
 class BaseBuilder extends Builder
 {
-    public function getAll(): Builder
+    public function getAll(): self
     {
         $this->select();
 
         return $this;
     }
 
-    public function findModel(int $id): Builder
+    public function findModel(int $id): self
     {
         $this->findOrFail($id);
 
         return $this;
     }
 
-    public function filter(string $attr, string|int $val): Builder
+    public function filter(string $attr, string|int $val): self
     {
         $this->where($attr, $val);
 
         return $this;
     }
 
-    public function statusFilter(int $status): Builder
+    public function statusFilter(int $status): self
     {
         $this->where('status', $status);
 
