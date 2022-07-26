@@ -33,4 +33,11 @@ class BaseBuilder extends Builder
 
         return $this;
     }
+
+    public function filterByCompare(string $attr, string $compare, string|int $val): self
+    {
+        $this->where($attr, $compare, $val);
+
+        return $this;
+    }
 }
