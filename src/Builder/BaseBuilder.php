@@ -27,6 +27,27 @@ class BaseBuilder extends Builder
         return $this;
     }
 
+    public function filterIn(string $attr, array $data): self
+    {
+        $this->whereIn($attr, $data);
+
+        return $this;
+    }
+
+    public function modelWith(string $relationship, int $id): self
+    {
+        $this->with($relationship)->where('id', $id);
+
+        return $this;
+    }
+
+    public function allWith(string $relationship): self
+    {
+        $this->with($relationship);
+
+        return $this;
+    }
+
     public function statusFilter(int $status): self
     {
         $this->where('status', $status);
@@ -37,6 +58,13 @@ class BaseBuilder extends Builder
     public function filterByCompare(string $attr, string $compare, string|int $val): self
     {
         $this->where($attr, $compare, $val);
+
+        return $this;
+    }
+
+    public function sort(string $attr, string $direction): self
+    {
+        $this->orderBy($attr, $direction);
 
         return $this;
     }
