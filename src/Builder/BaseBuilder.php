@@ -62,7 +62,7 @@ class BaseBuilder extends Builder
         return $this;
     }
 
-    public function sort(string $attr, string $direction): self
+    public function sort(string $attr, string $direction = 'asc'): self
     {
         $this->orderBy($attr, $direction);
 
