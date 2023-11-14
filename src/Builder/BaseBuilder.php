@@ -34,14 +34,14 @@ class BaseBuilder extends Builder
         return $this;
     }
 
-    public function modelWith(string $relationship, int $id): self
+    public function modelWith(string|array $relationship, int $id): self
     {
         $this->with($relationship)->where('id', $id);
 
         return $this;
     }
 
-    public function allWith(string $relationship): self
+    public function allWith(string|array $relationship): self
     {
         $this->with($relationship);
 
